@@ -1,5 +1,5 @@
 <!--Descriptive page name, messages and instructions-->
-<h2 class="heading"><%= ts("Import New Work") %> <%= link_to_help 'work-import'%></h2>
+<h2 class="heading"><%= t(".page_heading") %> <%= link_to_help_modal(help_works_import_path, t(".works_import_help_title"))%></h2>
 <% import = true %>
 
 <%= error_messages_for :work %>
@@ -49,7 +49,7 @@
           <%= options_for_select(language_options_for_select(sorted_languages, "id"), @language_id) %>
         </select>
       </dd>
-      <dt><%= label_tag "encoding", ts("Set custom encoding") %> <%= link_to_help "encoding-help" %></dt> 
+      <dt><%= label_tag "encoding", ts("Set custom encoding") %> <%= link_to_help_modal(help_works_import_encoding_path, t(".works_import_encoding_help_title")) %></dt> 
       <dd><%= select_tag "encoding", options_for_select([''] + Encoding.name_list.sort) %></dd>
       <dt><%= ts("Import as") %></dt>
       <dd>
