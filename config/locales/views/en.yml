@@ -1158,6 +1158,8 @@ en:
   fandoms:
     index:
       page_heading: Fandoms
+    unassigned:
+      page_title: Unassigned Fandoms
   feedbacks:
     new:
       abuse:
